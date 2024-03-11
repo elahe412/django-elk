@@ -1,0 +1,26 @@
+{
+    "template": "logstash-test",
+    "index_patterns": [
+        "logstash-test-*"
+    ],
+    "settings": {
+        "number_of_shards": 2
+    },
+    "mappings": {
+        "properties": {
+            "name": {
+                "type": "keyword"
+            },
+            "host": {
+                "type": "ip"
+            },
+            "@version": {
+                "type": "integer"
+            },
+            "@timestamp": {
+                "type": "date"
+            }
+        }
+    }
+}
+
